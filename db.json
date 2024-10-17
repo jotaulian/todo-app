@@ -1,0 +1,14 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "description": "First task created",
+      "completed": false
+    },
+    {
+      "id": "2",
+      "description": "Second task created",
+      "completed": true
+    }
+  ]
+}
