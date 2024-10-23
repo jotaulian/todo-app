@@ -1,0 +1,43 @@
+<div class="h-full grid justify-content-center align-content-center login-page">
+  <!-- Card -->
+  <div
+    class="w-11 md:w-7 lg:w-5 h-auto bg-white py-4 px-3 md:p-6 border-round-2xl shadow-2"
+  >
+    <div class="flex align-content-center justify-content-center">
+      <i
+        class="pi pi-trophy text-yellow-500 mr-2 align-self-center"
+        style="font-size: 2rem"
+      ></i>
+      <h1 class="my-0">Mi mundialito</h1>
+    </div>
+    <p class="text-center">
+      Ingresa tu email y te enviaremos un enlace para iniciar sesión:
+    </p>
+    <!-- form -->
+    <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" class="form-widget">
+      <div class="flex flex-column mt-4">
+        <div class="flex justify-content-center">
+          <input
+            pInputText
+            formControlName="email"
+            variant="filled"
+            class="inputField text-center w-10"
+            type="email"
+            placeholder="Ingresar correo electrónico"
+          />
+        </div>
+        <div class="flex justify-content-center mt-4">
+          <p-button
+            type="submit"
+            class="button block"
+            [disabled]="loading"
+            [raised]="true"
+            severity="contrast"
+          >
+            {{ loading ? "Cargando..." : "Enviar enlace mágico" }}
+          </p-button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
