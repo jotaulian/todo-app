@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SupabaseService } from './supabase.service';
 
 @Component({
@@ -6,12 +6,10 @@ import { SupabaseService } from './supabase.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit  {
+export class AppComponent  {
   title = 'Mi Mundialito';
 
    constructor(private readonly supabase: SupabaseService) {}
 
-  ngOnInit(): void {
-    this.supabase.authChanges((_, session) => (this.session = session))
-  }
+
 }
